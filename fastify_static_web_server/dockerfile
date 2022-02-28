@@ -1,0 +1,15 @@
+FROM node:alpine
+
+RUN apk add dumb-init
+
+ENV NODE_ENV production
+
+USER node
+
+COPY --chown=node:node . /usr/src/app
+
+EXPOSE 8443
+
+ENTRYPOINT ["/usr/bin/dumb-init", "--"]
+
+CMD ["node", "./usr/src/app/server.js"]

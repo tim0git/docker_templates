@@ -1,0 +1,9 @@
+.env
+.npmrc
+.git
+.gitignore
+package.json
+package-lock.json
+dockerfile
+.dockerignore
+README.md
